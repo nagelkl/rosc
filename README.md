@@ -8,3 +8,32 @@ rosc alpha supports subscribers and publishers, with some known issues with nest
 
 See Doxygen Documentation at:
 http://synapticon.github.io/rosc/
+
+
+How to try it. 
+===
+Currently it is still an alpha. To try it out you have to do the following:
+
+  mkdir ~/rosc_ws
+  
+  cd ~/rosc_ws 
+  
+  git clone git@github.com:synapticon/rosc.git
+  
+  cd rosc
+  
+  rm CMakeLists.txt
+  
+  catkin_init_workspace
+  
+  cd /opt/ros/indigo/etc/ros/genmsg
+  
+  sudo touch genc
+  
+  cd /opt/ros/indigo/lib
+  
+  sudo ln -s ~/rosc_ws/rosc/genc
+  
+  cd ~/rosc_ws
+  
+  catkin_make --source rosc
